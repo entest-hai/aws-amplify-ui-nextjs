@@ -1,6 +1,20 @@
 # Setup Eslint for React with Typescript 
 **17 APR 2022 Hai Tran**
 
+## Setup NextJS project 
+```
+npm init -y
+```
+update package.json 
+```
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion next react react-dom react-table react-icons @chakra-ui/icons
+```
+support typescript 
+```
+npm i -D typescript
+```
+
+
 ## Setup eslint terminal 
 install 
 ```
@@ -31,6 +45,7 @@ npx eslint yourfile.js
 ```
 extension and install eslint 
 ```
+**Restart Eslint** from vscode command if needed. 
 
 
 ## Getting started with Chakra UI 

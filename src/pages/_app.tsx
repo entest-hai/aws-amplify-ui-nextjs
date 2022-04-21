@@ -4,7 +4,7 @@
 // Import styles as '../styles/index.scss'
 // Copy tsconfig.json from the Amplify UI repository
 
-import { AmplifyProvider } from "@aws-amplify/ui-react";
+import { AmplifyProvider, ColorMode } from "@aws-amplify/ui-react";
 import Head from "next/head";
 import * as React from "react";
 import { useRouter } from "next/router";
@@ -48,7 +48,7 @@ function MyApp() {
         )}
       </Head>
 
-      <AmplifyProvider theme={theme} colorMode={colorMode}>
+      <AmplifyProvider theme={theme} colorMode={colorMode as ColorMode}>
         <Header
           platform={platform}
           colorMode={colorMode}

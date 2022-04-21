@@ -1,6 +1,6 @@
 # Setup Eslint for React with Typescript
 
-**17 APR 2022 Hai Tran**
+**17 APR 2022 Hai Tran update**
 
 ## Setup NextJS project
 

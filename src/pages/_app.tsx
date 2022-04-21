@@ -13,7 +13,7 @@ import Header from "@/components/Layout/Header";
 import { META_INFO } from "@/data/meta";
 import "../styles/index.scss";
 
-if (typeof window === "undefined") React.useLayoutEffect = React.useEffect;
+// if (typeof window === "undefined") React.useLayoutEffect = React.useEffect;
 
 function MyApp() {
   const router = useRouter();

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/data/*": ["src/data/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@aws-sdk/client-s3": [
+        "./node_modules/@aws-sdk/client-s3/dist/es",
+        "./node_modules/@aws-sdk/client-s3"
+      ],
+      "@aws-sdk/node-http-handler": [
+        "./node_modules/@aws-sdk/node-http-handler/dist/es",
+        "./node_modules/@aws-sdk/node-http-handler"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

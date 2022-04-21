@@ -13,7 +13,7 @@ import NextLink from "next/link";
 import LinkButton from "./LinkButton";
 import { useRouter } from "next/router";
 import { Logo } from "@/components/Logo";
-import { SecondaryNav } from "./SecondaryNav";
+// import { SecondaryNav } from "./SecondaryNav";
 import {
   MdClose,
   MdMenu,
@@ -166,7 +166,7 @@ const Header = ({ platform, colorMode, setColorMode }) => {
 
           <Nav onClick={() => setExpanded(false)} />
           <nav className="docs-sidebar-nav">
-            <SecondaryNav onClick={() => setExpanded(false)} />
+            {/* <SecondaryNav onClick={() => setExpanded(false)} /> */}
           </nav>
         </View>
       ) : null}

@@ -12,7 +12,7 @@ import * as React from "react";
 import NextLink from "next/link";
 import LinkButton from "./LinkButton";
 import { useRouter } from "next/router";
-import { Logo } from "@/components/Logo";
+import { Logo } from "../Logo";
 // import { SecondaryNav } from "./SecondaryNav";
 import {
   MdClose,

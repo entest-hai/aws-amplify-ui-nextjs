@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 export const HomeLogo = () => (
   <svg viewBox="0 0 932 284" fill="none" xmlns="http://www.w3.org/2000/svg">
     <title>Amplify UI</title>

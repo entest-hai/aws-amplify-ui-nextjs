@@ -128,3 +128,68 @@ ReactDOM.render(
 ```
 
 ## Configure tsconfig.json
+
+## Setup vim for vscode
+
+## How AmplifyProvider and Theme work with SCSS
+
+**22 APR 200 Hai Tran**
+Quote from the principale design engineer from AWS
+
+```
+When you use the <AmplifyProvider> it wraps all the children in a div with that data attribute, and then adds all the CSS variables the theme needs. Looking at that SCSS [data-amplify-theme] .docs-nav-link I don't think we actually need the [data-amplify-theme] part of the selector, it might be leftover from some refactoring.
+That code is to make the theme switcher on the homepage of the site work. Rather than passing in entirely new theme objects to the AmplifyProvider, a theme can have overrides that change the theme based on certain conditions (like targeting a different selector in CSS, or for light/dark mode). If you look at theme.ts in the docs you will see some overrides with selectors, then in the homepage when you click on a theme button it applies that data attribute and the new theme css vars get applied. https://ui.docs.amplify.aws/theming#overrides
+
+```
+
+This is a great topic to dive in and share
+
+### Hello SCSS
+
+- selector
+- @media
+- variable
+- document.documentElement.setAttribute()
+
+### How AmplifyProvider and Theme work with SCSS
+
+- Override by theme object
+- OVerride by SCSS variable
+- How they work together
+
+## Next router
+
+-
+
+## Export static and deploy to S3
+
+setup
+
+```
+"scripts": {
+  "build": "next build && next export"
+}
+```
+
+```
+npm run build
+```
+
+## Amplify host
+
+should clean package.json file
+
+```
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "preflutter:build": "yarn flutter:clean",
+    "flutter:build": "(cd flutter/authenticator && flutter build web)",
+    "postflutter:build": "yarn flutter:copy",
+    "flutter:clean": "rm -rf public/flutter/authenticator",
+    "flutter:copy": "cp -r ./flutter/authenticator/build/web public/flutter/authenticator",
+    "build": "next build && next export",
+    "lint": "next lint",
+    "start": "next start",
+    "test": "$_ run build"
+  },
+```

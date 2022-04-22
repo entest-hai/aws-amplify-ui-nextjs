@@ -6,7 +6,7 @@ import {
   useTheme,
   Image,
 } from '@aws-amplify/ui-react';
-import { HomeLogo } from './HomeLogo';
+import { HomeLogo } from './../components/HomeLogo';
 import { Copy } from '../components/Copy';
 import * as React from 'react';
 

@@ -13,7 +13,7 @@ import NextLink from "next/link";
 import LinkButton from "./LinkButton";
 import { useRouter } from "next/router";
 import { Logo } from "../Logo";
-// import { SecondaryNav } from "./SecondaryNav";
+// import { SecondaryNav } from "./Secondary";
 import {
   MdClose,
   MdMenu,

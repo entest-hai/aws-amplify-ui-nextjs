@@ -15,7 +15,7 @@ import "../styles/index.scss";
 
 // if (typeof window === "undefined") React.useLayoutEffect = React.useEffect;
 
-function MyApp() {
+function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const { platform = "react" } = router.query;
   const [colorMode, setColorMode] = React.useState("system");
@@ -54,6 +54,12 @@ function MyApp() {
           colorMode={colorMode}
           setColorMode={setColorMode}
         ></Header>
+        <Component
+          {...pageProps}
+          colorMode={colorMode}
+          setThemeOverride={setThemeOverride}
+          themeOverride={themeOverride}
+        ></Component>
       </AmplifyProvider>
     </>
   );

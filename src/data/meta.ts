@@ -3,6 +3,11 @@ export interface MetaInfo {
 }
 
 export const META_INFO: MetaInfo = {
+  '/home': {
+    title: 'Home',
+    description:
+      'Amplify UI is an open-source design system with cloud-connected components and primitives that simplify building accessible, performant, and beautiful applications in React, Angular, Vue, and Flutter (more coming soon).',
+  },
   '/': {
     title: 'Home',
     description:

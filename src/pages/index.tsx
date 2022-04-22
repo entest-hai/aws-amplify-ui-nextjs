@@ -1,4 +1,11 @@
-import { Button, Card, Flex, Text, useTheme } from '@aws-amplify/ui-react';
+import {
+  Button,
+  Card,
+  Flex,
+  Text,
+  useTheme,
+  Image,
+} from '@aws-amplify/ui-react';
 import { HomeLogo } from './HomeLogo';
 import { Copy } from '../components/Copy';
 import * as React from 'react';
@@ -15,7 +22,10 @@ const MyHomePage = () => {
       <h1 className="docs-home-logo">
         <HomeLogo></HomeLogo>
       </h1>
-      <Flex>
+      <Flex
+        direction={{ base: 'column', medium: 'row' }}
+        padding={tokens.space.large}
+      >
         <Card variation="outlined" flex={1}>
           <Text
             fontSize={{
@@ -46,6 +56,33 @@ const MyHomePage = () => {
             </code>
           </Flex>
         </Card>
+        <Flex
+          alignSelf={'center'}
+          textAlign={'center'}
+          flex="1"
+          display={{ base: 'none', large: 'initial' }}
+        >
+          <Image
+            alt=""
+            className="docs-home-react"
+            src="/svg/integrations/vue.svg"
+          ></Image>
+          <Image
+            alt=""
+            className="docs-home-react"
+            src="/svg/integrations/react.svg"
+          ></Image>
+          <Image
+            alt=""
+            className="docs-home-react"
+            src="/svg/integrations/angular.svg"
+          ></Image>
+          <Image
+            alt=""
+            className="docs-home-react"
+            src="/svg/integrations/flutter.svg"
+          ></Image>
+        </Flex>
       </Flex>
     </div>
   );

@@ -1,4 +1,4 @@
-# Setup Eslint for React with Typescript
+# Setup Eslint for React with Typescript update here
 
 **17 APR 2022 Hai Tran update**
 

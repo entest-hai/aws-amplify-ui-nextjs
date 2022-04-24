@@ -14,7 +14,7 @@ import {
 } from '@aws-amplify/ui-react';
 import { HomeLogo } from './../components/HomeLogo';
 import { Copy } from '../components/Copy';
-import { ThemeButton } from './ThemeButton';
+import { ThemeButton } from '../components/ThemeButton';
 import * as React from 'react';
 
 const MyHomePage = () => {

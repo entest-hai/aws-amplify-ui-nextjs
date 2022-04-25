@@ -152,11 +152,7 @@ export const HomePrimitivePreview = () => {
           labelHidden
         />
       </Flex>
-      <Flex direction="row" alignItems="flex-start">
-        <CheckboxField label="Pepperoni" defaultChecked={true} />
-        <CheckboxField label="Bell Peppers" />
-        <CheckboxField label="Mushrooms" />
-      </Flex>
+      <Flex direction="row" alignItems="flex-start"></Flex>
     </Flex>
   );
 };

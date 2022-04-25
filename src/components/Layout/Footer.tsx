@@ -26,8 +26,6 @@ export const Footer = () => {
           variation="link"
           gap={tokens.space.small}
           alignItems="baseline"
-          href="https://github.com/aws-amplify/amplify-ui"
-          isExternal={true}
           color={tokens.colors.font.tertiary}
         >
           <Icon ariaLabel="Github" pathData={icons.GITHUB} />

@@ -1,4 +1,6 @@
-import * as React from "react";
+// 26 APR 2022 Hai Tran
+// Add footer
+import * as React from 'react';
 import {
   Icon,
   Link,
@@ -6,11 +8,11 @@ import {
   View,
   useTheme,
   Button,
-} from "@aws-amplify/ui-react";
+} from '@aws-amplify/ui-react';
 
-import * as links from "@/data/links";
-import * as icons from "@/data/icon";
-import { Logo } from "@/components/Logo";
+import * as links from '@/data/links';
+import * as icons from '@/data/icon';
+import { Logo } from '@/components/Logo';
 
 export const Footer = () => {
   const { tokens } = useTheme();
@@ -49,11 +51,11 @@ export const Footer = () => {
         <View>
           Amplify open source, documentation and community are supported by
           Amazon Web Services © {new Date().getFullYear()}, Amazon Web Services,
-          Inc. and its affiliates. All rights reserved. View the{" "}
+          Inc. and its affiliates. All rights reserved. View the{' '}
           <Link isExternal={true} href={links.TERMS}>
             site terms
-          </Link>{" "}
-          and{" "}
+          </Link>{' '}
+          and{' '}
           <Link isExternal={true} href={links.PRIVACY}>
             privacy policy
           </Link>

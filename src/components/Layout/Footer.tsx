@@ -1,17 +1,16 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Icon,
   Link,
-  Text,
   Flex,
   View,
   useTheme,
   Button,
-} from '@aws-amplify/ui-react';
+} from "@aws-amplify/ui-react";
 
-import * as links from '@/data/links';
-import * as icons from '@/data/icon';
-import { Logo } from '@/components/Logo';
+import * as links from "@/data/links";
+import * as icons from "@/data/icon";
+import { Logo } from "@/components/Logo";
 
 export const Footer = () => {
   const { tokens } = useTheme();
@@ -36,11 +35,10 @@ export const Footer = () => {
           variation="link"
           gap={tokens.space.small}
           alignItems="baseline"
-          href="https://discord.gg/amplify"
-          isExternal={true}
           color={tokens.colors.font.tertiary}
         >
           <Icon
+            ariaLabel="Discord"
             viewBox={{ minX: 0, minY: 0, width: 245, height: 240 }}
             pathData={icons.DISCORD}
           />
@@ -51,11 +49,11 @@ export const Footer = () => {
         <View>
           Amplify open source, documentation and community are supported by
           Amazon Web Services © {new Date().getFullYear()}, Amazon Web Services,
-          Inc. and its affiliates. All rights reserved. View the{' '}
+          Inc. and its affiliates. All rights reserved. View the{" "}
           <Link isExternal={true} href={links.TERMS}>
             site terms
-          </Link>{' '}
-          and{' '}
+          </Link>{" "}
+          and{" "}
           <Link isExternal={true} href={links.PRIVACY}>
             privacy policy
           </Link>

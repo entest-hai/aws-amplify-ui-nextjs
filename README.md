@@ -58,6 +58,39 @@ update package.json
   }
 ```
 
+```
+{
+  "name": "amplify-ui-next-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-amplify/ui-react": "^2.15.6",
+    "aws-amplify": "^4.3.20",
+    "next": "^12.1.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.29",
+    "@types/react": "^18.0.8",
+    "typescript": "^4.6.3"
+  }
+}
+
+```
+
 ## Setup eslint terminal
 
 install

@@ -11,11 +11,24 @@ import {
   IconChevronRight,
   ToggleButtonGroup,
   ToggleButton,
+  Link,
+  Grid,
 } from '@aws-amplify/ui-react';
 import { HomeLogo } from './../components/HomeLogo';
 import { Copy } from '../components/Copy';
 import { ThemeButton } from '../components/ThemeButton';
+import { Footer } from '../components/Layout/Footer';
 import * as React from 'react';
+import { HomePrimitivePreview } from '../components/HomePrimitivePreview';
+
+const AmpCard = ({ title, description, href }) => (
+  <Link isExternal href={href} className="docs-home-amp-product-card">
+    <Card textAlign={'center'} variation="outlined">
+      <Heading level={3}>{title}</Heading>
+      <Text>{description}</Text>
+    </Card>
+  </Link>
+);
 
 const MyHomePage = () => {
   const { tokens } = useTheme();
@@ -125,7 +138,11 @@ const MyHomePage = () => {
         </Flex>
       </View>
 
-      <View>
+      <View
+        as="section"
+        className="docs-home-section"
+        backgroundColor={tokens.colors.background.secondary}
+      >
         <Flex
           className="container"
           direction={{ base: 'column', large: 'row' }}
@@ -182,6 +199,92 @@ const MyHomePage = () => {
           </Flex>
         </Flex>
       </View>
+
+      <View as="section" className="docs-home-section">
+        <Flex
+          className="container"
+          direction={{ base: 'column', large: 'row' }}
+          gap={tokens.space.xxl}
+        >
+          <View maxWidth="100%" overFlow="hidden">
+            <HomePrimitivePreview></HomePrimitivePreview>
+          </View>
+          <Flex flex={1} direction={'column'} alignItems="flex-start">
+            <Heading level={2}>Primitive Components</Heading>
+            <Text className="docs-home-description">
+              Primitive components that create consistency accross Amplify UI
+              and allow you to build complete applications that fit your brand,
+              like Buttons and Badges.
+            </Text>
+            <Button as="a" size="large">
+              Get started with components
+            </Button>
+          </Flex>
+        </Flex>
+      </View>
+
+      <View
+        as="section"
+        className="docs-home-section"
+        direction={{ base: 'column', large: 'row' }}
+      >
+        <Flex
+          className="container"
+          direction={{ base: 'column', large: 'row' }}
+        >
+          <View flex={1}>
+            <Heading level={2}>Accesibility</Heading>
+            <Text className="docs-home-description">
+              Amplify UI components follow{' '}
+              <Link isExternal href="/">
+                WCAG
+              </Link>{' '}
+              and{' '}
+              <Link isExternal href="/">
+                WAI-ARIA
+              </Link>{' '}
+              best practices and guidelines such as color contrast, keyboard,
+              navigation, accessible labels, and focus management.
+            </Text>
+          </View>
+          <View flex={1}></View>
+        </Flex>
+      </View>
+
+      <View as="section" className="docs-home-section">
+        <Heading level={2} textAlign="center" margin={tokens.space.large}>
+          Looking for other Amplify Products?
+        </Heading>
+        <Grid
+          className="container"
+          templateColumns={{ base: '1fr', medium: '1fr 1fr' }}
+          gap={tokens.space.medium}
+          flex={1}
+        >
+          <AmpCard
+            href="/"
+            title={'Amplify Libraries'}
+            description="Connect app to new or existing AWS services (Cognito, S3, and more)"
+          ></AmpCard>
+          <AmpCard
+            href="/"
+            title={'Amplify Libraries'}
+            description="Connect app to new or existing AWS services (Cognito, S3, and more)"
+          ></AmpCard>
+          <AmpCard
+            href="/"
+            title={'Amplify Libraries'}
+            description="Connect app to new or existing AWS services (Cognito, S3, and more)"
+          ></AmpCard>
+          <AmpCard
+            href="/"
+            title={'Amplify Libraries'}
+            description="Connect app to new or existing AWS services (Cognito, S3, and more)"
+          ></AmpCard>
+        </Grid>
+      </View>
+
+      <Footer></Footer>
     </div>
   );
 };

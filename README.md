@@ -8,6 +8,32 @@
 npm init -y
 ```
 
+install most basic things
+
+```
+npm install next react react-dom react-icons
+```
+
+create src and pages
+
+```
+mkdir src
+mkdir src/pages
+touch src/pages/index.tsx
+```
+
+install typescript
+
+```
+npm install --save-dev typescript @types/react @types/node
+```
+
+install amplify sdk
+
+```
+npm install aws-amplify @aws-amplify/ui-react
+```
+
 update package.json
 
 ```
